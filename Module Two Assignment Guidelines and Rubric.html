@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment Information</title>
+
+  <!-- HTML RUBRIC TEMPLATE -->
+
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="/shared/custom_html/shared/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!--globalCampus.css containing typography standards -->
+  <link rel="stylesheet" href="/shared/HTML-Template-Library/GC Core Paced/module_templates/../assets/css/main.min.css">
+  <style>
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+
+    #rubric-responsive table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      max-width: 1080px;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    #rubric-responsive thead th:first-child {
+      width: 17%;
+    }
+    #rubric-responsive thead th:last-child {
+      width: 10%;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      border: 1px solid black;
+      padding: 7px;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      background-color: #f5f5f5;
+    }
+
+#rubric-responsive th {text-align: center;
+                      }
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      vertical-align: text-top;
+    }
+
+    /* Center data in "Value" column */
+    #rubric-responsive tbody > tr > :last-child {
+      text-align: center;
+    }
+
+    /* Style first column like header row in case <th> isn't used */
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      font-weight: bold;
+      text-align: center;
+    }
+
+/* right align total: text */
+      #rubric-responsive tbody > tr:last-child > :nth-child(1) {
+        font-weight: bold;
+        text-align: right;
+}
+
+    @media only screen and (max-width: 800px) {
+
+      /* Display table elements as block */
+      #rubric-responsive table,
+      #rubric-responsive thead,
+      #rubric-responsive tbody,
+      #rubric-responsive th,
+      #rubric-responsive td,
+      #rubric-responsive tr,
+      #rubric-responsive tfoot {
+        display: block;
+      }
+
+      #rubric-responsive caption {
+        display: inline-block;
+        margin: 0px auto;
+      }
+
+      /* Remove border from table and center it on screen */
+      #rubric-responsive table {
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+
+
+    /* Hide table headers (but not display: none; (for accessibility) */
+      #rubric-responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      /* Style responsive table rows */
+      #rubric-responsive tr {
+        border: 1px solid #ccc;
+      }
+
+      /* Style responsive table cells */
+      #rubric-responsive td {
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      #rubric-responsive td:before {
+      /* Bring "data-title" attribute into table cells */
+        content: attr(data-attr);
+      /* display it as inline block so it doesn't interfere with <td> */
+        display: inline-block;
+      /* make it take up it's entire "row" */
+        width: 100%;
+      /* bold font so it looks like a th */
+        font-weight: bold;
+      }
+
+  /* Remove "data-title" attribute from first child <td> cells */
+  /* this removes "Criteria" from the Total row, and will remove criteria from any <td> cells that should be <th> */
+      #rubric-responsive tbody>tr>td:first-child:before {
+          content: none;
+      }
+
+      /* Center data in "Value" column */
+      #rubric-responsive tbody > tr > :last-child {
+        text-align: left;
+      }
+
+      /* Don't display "100%" cell */
+      #rubric-responsive tr:last-child td:last-of-type {
+        display: none;
+      }
+
+      /* Add "100%" after Total:  */
+      #rubric-responsive
+        tr:last-child
+        td:first-of-type::after {
+        content: " 100%";
+      }
+      /* remove padding from last row */
+      #rubric-responsive tr:last-child > td {
+        padding: 7px;
+      }
+    }
+
+    /* Print Styles*/
+    @media print {
+      @page {
+        size: landscape;
+      }
+
+      span.rsbtn_text {
+        display: none !important;
+      }
+
+      p,
+      ul,
+      ol,
+      li,
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr,
+      tfoot {
+        font-size: 12px;
+      }
+
+      h1,
+      h2 {
+        font-size: 90%;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 80%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      .d-print-none {
+        display: none;
+      }
+
+      .d-print-block {
+        display: block;
+      }
+    }
+  </style> 
+     
+  <style>
+    img {
+      float: right;
+      margin-left: 20px;
+      width: 38vw;
+    }
+@media only screen and (max-width: 800px) {
+    img {
+      float:none;
+      align: center;
+      width:100vw;
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto;
+    }
+  </style>
+  </head><body><p><a href="blank.html?isCourseFile=true" aria-hidden="true" role="presentation" class="rs_skip" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; font-size: 0;" tabindex="-1" onclick="window.open(this.href, '_blank'); return false;">. </a></p>
+<h1>IT 140 Module Two Assignment Guidelines and Rubric</h1>
+<!--Begin copy to add more sections. Use appropriate heading tags for subsections-->
+<h2>Overview</h2>
+<p>An integrated development environment (IDE) is a tool for programmers to write, run, test, and organize their code. Some IDEs are designed for a specific programming language, such as PyCharm for Python, while others, such as Visual Studio Code (VS Code), can be used in many different programming languages.</p>
+<p>In this assignment, you will write and run a simple Python program in your IDE. This program will prompt the user to manually input the requested information from their keyboard, perform a calculation on the input data, and output a formatted message to the display for the user to read.</p>
+<h2>Prompt</h2>
+<p>For this project, you will be developing a Python (.py) file that contains your code using your IDE and evaluating a few of its features. If you haven’t already, complete the Module One Setup Tasks before continuing with this assignment.</p>
+<p><strong>Part A<br></strong></p>
+<p>In your IDE, write a program that prompts the user for their name and age. Your program should then tell the user the year they were born. Assume the user has already had their birthday this year. You do not need to ask for the user’s date of birth.</p>
+<p>The following sample runs were run in 2025. Do not type 2025 directly into your code as a fixed value. This is called <i>hardcoding</i>, which means putting one specific value into your script even though that value may change later. Instead, your script should use the real-world current year at the time you are writing and testing your code.</p>
+<p>Here are two sample executions of the program with the user input <b>in bold</b>:</p>
+<p><strong>Sample Run 1</strong></p>
+<pre><code>What is your name? <strong>Alex</strong>
+How old are you? <strong>24</strong><br><br>Hello Alex! You were born in 2001.
+</code></pre>
+<p><strong>Sample Run 2</strong></p>
+<pre><code>What is your name? <strong>Jordan</strong>
+How old are you? <strong>37</strong>
+
+Hello Jordan! You were born in 1988.
+</code></pre>
+<ol>
+<li>In your IDE, write a program that prompts the user for their name and age. Your program should then tell the user the year they were born. Assume the user has already had their birthday this year. You do not need to ask for the user’s date of birth. <b>Format your code using best practices.</b> Refer to the zyBooks style guide, if needed, to use proper naming conventions for variables and methods. <b>Use the most appropriate statements</b> with minimal extraneous elements, steps, or procedures.</li>
+<li>Run the program.</li>
+<li>Debug the program. <b>Be sure your code produces the correct results.</b></li>
+<li>Save and submit your file.</li>
+</ol>
+<p><strong>Part B<br></strong></p>
+<p>While you don’t need an IDE to write a program, there are some features that make it desirable. What did you notice when using your IDE to develop a simple program? For instance, you might have noticed how color is used. <b>Identify two to three features that could make coding easier for programmers and briefly explain why.</b></p>
+<h2>Codio Optional</h2>
+<p>If you’re unable to access the software used for this assignment, you may use the Codio Virtual Desktop to complete this activity. Access this resource through the Optional Codio Virtual Desktop section of the Start Here area of your course.</p>
+<!--End copy to add section->
+<!--Do NOT change text for "What to Submit" heading-->
+<h2>What to Submit</h2>
+<p>The template files for this activity are located in the <a href="https://github.com/GC-STEM/it140-m2-assignment" target="_blank" rel="noopener">code repository</a> for this activity.</p>
+<ol style="list-style-type: upper-alpha;">
+<li>Using Module Two Python Template (name_age.py), create a working Python script that meets assignment requirements and submit for grading. Submit your script as a Python source code file (.py).</li>
+<li>Using Module Two IDE Features Template (ide_features.md), create a document of 3 to 4 paragraphs and submit for grading. Submit your pseudocode as a Markdown text file (.md).</li>
+</ol>
+<h2>AI Usage</h2>
+<p>If you use generative AI tools to support your work on this assignment, be sure to follow <a href="https://snhu.ink/StudentGenAIGuide" target="_blank" rel="noopener">these AI usage guidelines</a>. You must acknowledge your use of these tools in your work. Guidelines on how to cite AI tools can be found in <a href="https://snhu.ink/CitationAndAI" target="_blank" rel="noopener">this Shapiro Library guide</a>.</p>
+<h2 style="text-align: center;">Module Two Assignment Rubric</h2>
+<div id="rubric-responsive">
+<table>
+<thead>
+<tr><!--Do NOT change text for "Criteria" column heading-->
+<th class="table-borderless" scope="col">Criteria</th>
+<th scope="col">Meets Expectations (100%)</th>
+<th scope="col">Partially Meets Expectations (70%)</th>
+<th scope="col">Does Not Meet Expectations (0%)</th>
+<!--Do NOT change text for "Value" column heading-->
+<th scope="col">Value</th>
+</tr>
+</thead>
+<tbody><!--Begin copy to add ROWS. Update "td data-attr=" to match table headings exactly before copying and pasting.-->
+<tr>
+<th scope="row">Industry Standard Best Practices</th>
+<td data-attr="Meets Expectations (100%)">Formats code according to best practices, including comments, whitespace, and variable and method naming conventions according to the zyBooks style guide</td>
+<td data-attr="Partially Meets Expectations (70%)">Attempts to format code according to best practices, with minor errors such as inadequate comments, lack of whitespace, or inconsistent naming conventions</td>
+<td data-attr="Does Not Meet Expectations (0%)">Does not attempt criterion</td>
+<td data-attr="Value">25</td>
+</tr>
+<tr>
+<th scope="row">Efficiency</th>
+<td data-attr="Meets Expectations (100%)">Writes source code using the most appropriate statements, functions, or methods and contains minimal extraneous elements, steps, or procedures</td>
+<td data-attr="Partially Meets Expectations (70%)">Writes code that is mostly efficient, with minor errors such as convoluted code or choice of a less efficient element</td>
+<td data-attr="Does Not Meet Expectations (0%)">Does not attempt criterion</td>
+<td data-attr="Value">25</td>
+</tr>
+<tr>
+<th scope="row">Functionality</th>
+<td data-attr="Meets Expectations (100%)">Code produces correct results for all test cases in the given problem</td>
+<td data-attr="Partially Meets Expectations (70%)">Code produces incorrect results for the given problem or does not pass all tests for the given problem</td>
+<td data-attr="Does Not Meet Expectations (0%)">Does not attempt criterion</td>
+<td data-attr="Value">40</td>
+</tr>
+<tr>
+<th scope="row">Features</th>
+<td data-attr="Meets Expectations (100%)">Identifies three features of the IDE and explains how the features could simplify programming</td>
+<td data-attr="Partially Meets Expectations (70%)">Identifies one or two features of the IDE and explains how the features could simplify programming, or identifies three features but does not explain why they were helpful</td>
+<td data-attr="Does Not Meet Expectations (0%)">Does not attempt criterion</td>
+<td data-attr="Value">10</td>
+</tr>
+<!--End copy to add ROWS--><!--Paste additional ROWS here.-->
+<tr><!--Update "colspan" if columns are removed. Number should equal 1 less than total number of columns.-->
+<td colspan="4" style="text-align: right;">Total:</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+</div></body></html>

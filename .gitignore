@@ -3,7 +3,7 @@
 
 temp.*
 
- Byte-compiled / optimized / DLL files
+Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
 *$py.class
@@ -325,3 +325,10 @@ http-client.private.env.json
 .guides/
 .project-setup/
 .tmp/
+
+# Local files
+.DS_Store
+.gitignore
+.gitattributes
+.github/agents/
+*/.DS_Store
